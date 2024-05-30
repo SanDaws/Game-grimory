@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" 
+        content="save your own whish list of games whitin all the platforms">
+        <meta name="keywords" content="videogame, games, opinion, crud">
+        <meta name="sitedomain" content="https://game-grimory" />
+        <meta name="organization" content="Riwi" />
+        <meta name="author" content="Santiago C Giraldo" />
+        <meta name="designer" content="Santiago C Giraldo" />
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="revisit-after" content="15days" />
+    
+        <link rel="stylesheet" href="./src/css/IndexStyle.css">
+        <title>Mi experiencia con juegos De Pelea</title>
+    </head>
+  <body>
+    <header>
+        <h1>Game Grimory</h1>
+        <nav>
+            <a href=""></a>
+            <a href=""></a>
+        </nav>
+    </header>
+    <main>
+        <section id="form-to submit">
+            <form action="" method="post">
+                <label for="game-name" >Game Name</label>
+                <input type="text" name="game-name" id="" placeholder="" required>
+
+                <label for="plataform">Tienda de compra</label>
+                <select name="plataform" id="" required>
+                    <option selected disabled>Tienda</option>
+                    <option value="steam">Steam</option>
+                    <option value="epic-games">Epic Games</option>
+                    <option value="gog">GoG</option>
+                    <option value="ubisoft">Ubisoft-shop</option>
+                    <option value="ea-games">ea-games store</option>
+                </select>
+                <article class="d-flex">
+                    <div>
+                        <label for="price">price you find in store</label>
+                    <input type="text" name="price" id="" placeholder="">
+                    </div>
+                    <div>
+                        <label for="currency" >Currency</label>
+                        <select name="currency" id="">
+                            <option selected disabled>Currency</option>
+                            <option value="usd">USD</option>
+                            <option value="cop">Colombiapeso</option>
+                            <option value="yen">Yen</option>
+                            <option value="euro">Euro</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="d-flex">
+                    <div>
+                        <label for="price">minimum game price you will pay</label>
+                    <input type="text" name="price" id="" placeholder="your min price">
+                    </div>
+                    <div>
+                        <label for="currency" >Currency</label>
+                        <select name="currency" id="">
+                            <option selected disabled>Currency</option>
+                            <option value="usd">USD</option>
+                            <option value="cop">Colombiapeso</option>
+                            <option value="yen">Yen</option>
+                            <option value="euro">Euro</option>
+                        </select>
+                    </div>
+                </article>
+            <button type="submit" class="btn btn-primary" >
+                Agregar
+            </button>
+
+            </form>
+        </section>
+        <section id="table">
+            <table>
+                <thead>
+                    <th>Games you whish</th>
+                    <tr>
+                        <td>name</td>
+                        <td>price</td>
+                        <td>min price</td>
+                        <td>shop you know</td>
+                        <td>prices</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                <tfoot id="result"></tfoot>
+            </table>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
