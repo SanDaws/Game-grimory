@@ -31,7 +31,7 @@ form.addEventListener('submit', async (event) => {
         const jason = JSON.parse(JSON.stringify(valdata))
 
         localStorage.setItem('usertoken', jason.id)
-        //
+        window.location.href='/'
     } else {
         alert('you shall no pass')
     }

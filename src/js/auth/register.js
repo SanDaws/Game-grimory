@@ -9,11 +9,17 @@ const confPass= form.querySelector('#confirmPassword')
 //guardian
 function guardian() {
     const usertokken=localStorage.getItem('usertoken')
-    const validateEntrance= JSON.parse(usertokken)
+    console.log(usertokken);
+    if (usertokken != null) {
+        alert('usuario')
+        window.location.href='/'
+        
+    }
+
 
 }
 
-
+guardian()
 
 
 function validePass(pass,copypass) {
