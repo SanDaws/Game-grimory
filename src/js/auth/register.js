@@ -1,11 +1,20 @@
+const link= 'http://localhost:3000/'
+
 const form= document.querySelector('form')
 const nick = form.querySelector('#nickname')
 const mail = form.querySelector('#email')
 const pass= form.querySelector('#password')
 const confPass= form.querySelector('#confirmPassword')
 
+//guardian
+function guardian() {
+    const usertokken=localStorage.getItem('usertoken')
+    const validateEntrance= JSON.parse(usertokken)
 
-const URL= 'http://localhost:3000/'
+}
+
+
+
 
 function validePass(pass,copypass) {
     if (pass.value==copypass.value) {
