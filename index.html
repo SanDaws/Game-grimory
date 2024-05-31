@@ -1,103 +1,133 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" 
-        content="save your own whish list of games whitin all the platforms">
-        <meta name="keywords" content="videogame, games, opinion, crud">
-        <meta name="sitedomain" content="https://game-grimory" />
-        <meta name="organization" content="Riwi" />
-        <meta name="author" content="Santiago C Giraldo" />
-        <meta name="designer" content="Santiago C Giraldo" />
-        <meta name="robots" content="index,follow" />
-        <meta name="googlebot" content="index,follow" />
-        <meta name="revisit-after" content="15days" />
-    
-        <link rel="stylesheet" href="./src/css/IndexStyle.css">
-        <title>Mi experiencia con juegos De Pelea</title>
-    </head>
-  <body>
-    <header>
-        <h1>Game Grimory</h1>
-        <nav>
-            <a href=""></a>
-            <a href=""></a>
-        </nav>
-    </header>
-    <main>
-        <section id="form-to submit">
-            <form action="" method="post">
-                <label for="game-name" >Game Name</label>
-                <input type="text" name="game-name" id="" placeholder="" required>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+    content="save your own whish list of games whitin all the platforms">
+    <meta name="keywords" content="videogame, games, opinion, crud">
+    <meta name="sitedomain" content="https://game-grimory" />
+    <meta name="organization" content="Riwi" />
+    <meta name="author" content="Santiago C Giraldo" />
+    <meta name="designer" content="Santiago C Giraldo" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="revisit-after" content="15days" />
 
-                <label for="plataform">Tienda de compra</label>
-                <select name="plataform" id="" required>
-                    <option selected disabled>Tienda</option>
-                    <option value="steam">Steam</option>
-                    <option value="epic-games">Epic Games</option>
-                    <option value="gog">GoG</option>
-                    <option value="ubisoft">Ubisoft-shop</option>
-                    <option value="ea-games">ea-games store</option>
-                </select>
-                <article class="d-flex">
-                    <div>
-                        <label for="price">price you find in store</label>
-                    <input type="text" name="price" id="" placeholder="">
-                    </div>
-                    <div>
-                        <label for="currency" >Currency</label>
-                        <select name="currency" id="">
-                            <option selected disabled>Currency</option>
-                            <option value="usd">USD</option>
-                            <option value="cop">Colombiapeso</option>
-                            <option value="yen">Yen</option>
-                            <option value="euro">Euro</option>
-                        </select>
-                    </div>
-                </article>
-                <article class="d-flex">
-                    <div>
-                        <label for="price">minimum game price you will pay</label>
-                    <input type="text" name="price" id="" placeholder="your min price">
-                    </div>
-                    <div>
-                        <label for="currency" >Currency</label>
-                        <select name="currency" id="">
-                            <option selected disabled>Currency</option>
-                            <option value="usd">USD</option>
-                            <option value="cop">Colombiapeso</option>
-                            <option value="yen">Yen</option>
-                            <option value="euro">Euro</option>
-                        </select>
-                    </div>
-                </article>
-            <button type="submit" class="btn btn-primary" >
-                Agregar
-            </button>
+    <link rel="stylesheet" href="./src/css/IndexStyle.css">
+    <title>Game Grimory</title>
+</head>
+<body>
+<header>
+    <h1>Game Grimory</h1>
+    <nav>
+        <a href=""></a>
+        <a href=""></a>
+    </nav>
+</header>
+<main>
+    <section id="form-to submit">
+        <form action="" method="post">
+            <div class="d-flex">
+                <div class="mb-3 align-self-center">
+                    <label for="game-name" class="form-label">Game name</label>
+                    <input type="text" class="form-control" id="game-name" aria-describedby="game full name" required>
+                </div>
+                <!-- shop -->
+                <div class="form-floating align-self-center">
+                    <select class="form-select " id="floatingSelect" aria-label="Floating label select example">
+                        <option selected disabled>Shop</option>
+                        <option value="steam">Steam</option>
+                        <option value="epic-games">Epic Games</option>
+                        <option value="gog">GoG</option>
+                        <option value="ubisoft">Ubisoft-shop</option>
+                        <option value="ea-games">ea-games store</option>
+                    </select>
+                    <label for="floatingSelect">Shop where you seen it</label>
+                  </div>
+            </div>
 
-            </form>
-        </section>
-        <section id="table">
-            <table>
+            <article class="d-flex align-items-center">
+                <div>
+                    <div class="mb-3">
+                        <label for="act-price" class="form-label">price you find in store</label>
+                        <input type="number" class="form-control" id="act-price" aria-describedby="game full name" required>
+                    </div>
+                    
+                </div>
+                <div  class="mb-3">
+                    <label for="currency" >Currency</label>
+                    <select class="form-select form-select-sm " id="currency" aria-label="Currency you use" required>
+                        <option selected disabled>Currency</option>
+                        <option value="usd">USD</option>
+                        <option value="cop">Colombiapeso</option>
+                        <option value="yen">Yen</option>
+                        <option value="euro">Euro</option>
+                        </select>
+                </div>
+            </article>
+            <article class="d-flex align-items-center">
+                <div>
+                    <div class="mb-3">
+                        <label for="price-expect" class="form-label">minimum game price you will pay</label>
+                        <input type="number" class="form-control" id="price-expect" aria-describedby="" required>
+                    </div>
+                    
+                </div>
+                <div  class="mb-3">
+                    <label for="currency" >Currency</label>
+                    <select class="form-select form-select-sm" id="currency" aria-label="Currency you use" required>
+                        <option selected disabled>Currency</option>
+                        <option value="usd">USD</option>
+                        <option value="cop">Colombiapeso</option>
+                        <option value="yen">Yen</option>
+                        <option value="euro">Euro</option>
+                        </select>
+                </div>
+            </article>
+            
+        <button type="submit" class="btn btn-primary" >
+            Agregar
+        </button>
+
+        </form>
+    </section>
+    <section id="table">
+        <table>
+            <table class="table">
                 <thead>
-                    <th>Games you whish</th>
-                    <tr>
-                        <td>name</td>
-                        <td>price</td>
-                        <td>min price</td>
-                        <td>shop you know</td>
-                        <td>prices</td>
-                    </tr>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
                 </thead>
                 <tbody>
-
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
                 </tbody>
-                <tfoot id="result"></tfoot>
-            </table>
-        </section>
-    </main>
-    <footer></footer>
-    <script type="module" src="./src/js/main.js"></script>
-  </body>
+              </table>
+            <tfoot id="result"></tfoot>
+        </table>
+    </section>
+</main>
+<footer></footer>
+<script type="module" src="./src/js/main.js"></script>
+</body>
 </html>
