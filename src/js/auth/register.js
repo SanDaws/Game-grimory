@@ -16,7 +16,7 @@ function validePass(pass,copypass) {
     
 }
 async function validemail(email) {
-    const response = await fetch(`${URL}/user?email=${email.value}`)
+    const response = await fetch(`${URL}user?email=${email.value}`)
     const emails = await response.json()
 
     if (emails.length === 0) {
@@ -28,7 +28,7 @@ async function validemail(email) {
 
 }
 async function validatenick(nick) {
-    const response = await fetch(`${URL}/user?nick=${nick.value}`)
+    const response = await fetch(`${URL}user?nick=${nick.value}`)
     const nicks= await response.json()
     if (nicks.length=== 0) {
         return true
@@ -48,7 +48,7 @@ function newUser(nick,email,pass) {
 }
 
 async function sendUser(user) {
-    await fetch(`${URL}/user`,{
+    await fetch(`${URL}user`,{
         method: 'POST',
         headers:{
             'content-type':"aplication/json"
@@ -59,12 +59,13 @@ async function sendUser(user) {
 }
 form.addEventListener('submit',(event)=>{
     event.preventDefault()
-    const resulNick= validatenick(nick.value)
-    const resulMail= validemail(mail.value)
-    const resulPass= validePass(pass.value)
+    const resulNick= validatenick(nick)
+    const resulMail= validemail(mail)
+    const resulPass= validePass(pass,confPass)
     if (resulMail&& resulNick && resulPass) {
 
-        const user=newUser(nick.value,mail.value,pass.value)
+        const user=newUser(nick,mail,pass)
         sendUser(user)
     }
+    // window.location.href='./'
 })
