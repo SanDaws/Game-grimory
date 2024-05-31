@@ -1,2 +1,18 @@
+$e-violet:#62466B;
+$vermilion:#F24236;
+$hunyadi-y:#F4AC45;
+$sparagus:#73956F;
+
+$theme-colors: (
+  "primary":    $e-violet,
+//   "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark
+);
+
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
