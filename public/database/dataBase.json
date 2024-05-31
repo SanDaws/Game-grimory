@@ -1,24 +1,26 @@
 {
-    "game":[
-        {
-            "id":"0000",
-            "name": "turnip boy commit tax evasion"
-            
-        },
-        {
-            "id":"0000",
-            "name": "turnip boy commit tax evasion"
-            
-        }
-    ],
-    "user":[
-        {
-            "nick":"",
-            "password":"",
-            "email":""
-        }
-    ]
-    
+  "game": [
+    {
+      "id": "0000",
+      "name": "turnip boy commit tax evasion"
+    },
+    {
+      "id": "0000",
+      "name": "turnip boy commit tax evasion"
+    }
+  ],
+  "user": [
+    {
+      "nick": "",
+      "password": "",
+      "email": "",
+      "id": "9a15"
+    },
+    {
+      "id": "d4a3",
+      "nick": "daws",
+      "password": "111",
+      "email": "daws@gmail.com"
+    }
+  ]
 }
-
-
