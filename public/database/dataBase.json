@@ -17,9 +17,13 @@
       "nick": "daws",
       "password": "111",
       "email": "daws@gmail.com"
+    },
+    {
+      "id": "f3bb",
+      "nick": "sandaws",
+      "password": "aligator33",
+      "email": "dawsgamer88@gmail.com"
     }
   ],
-  "shops":{
-    
-  }
+  "shops": {}
 }
