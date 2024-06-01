@@ -82,5 +82,5 @@ form.addEventListener('submit',(event)=>{
         const user=newUser(nick,mail,pass)
         sendUser(user)
     }
-    // window.location.href='./'
+    window.location.href='./'
 })
