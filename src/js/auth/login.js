@@ -16,8 +16,6 @@ async function validate(email, password) {
         return false
     }
 
-
-
 }
 
 
@@ -33,7 +31,7 @@ form.addEventListener('submit', async (event) => {
         localStorage.setItem('usertoken', jason.id)
         window.location.href='/'
     } else {
-        alert('you shall no pass')
+        alert('you shall not pass')
     }
 
 
