@@ -12,7 +12,7 @@ function guardian() {
     console.log(usertokken);
     if (usertokken != null) {
         alert('usuario')
-        window.location.href='/'
+        window.location.href='./'
         
     }
 
@@ -31,7 +31,7 @@ function validePass(pass,copypass) {
     
 }
 async function validemail(email) {
-    const response = await fetch(`${URL}user?email=${email.value}`)
+    const response = await fetch(`${link}user?email=${email.value}`)
     const emails = await response.json()
 
     if (emails.length === 0) {
@@ -43,7 +43,7 @@ async function validemail(email) {
 
 }
 async function validatenick(nick) {
-    const response = await fetch(`${URL}user?nick=${nick.value}`)
+    const response = await fetch(`${link}user?nick=${nick.value}`)
     const nicks= await response.json()
     if (nicks.length=== 0) {
         return true
@@ -63,7 +63,7 @@ function newUser(nick,email,pass) {
 }
 
 async function sendUser(user) {
-    await fetch(`${URL}user`,{
+    await fetch(`${link}user`,{
         method: 'POST',
         headers:{
             'content-type':"aplication/json"
