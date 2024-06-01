@@ -62,6 +62,12 @@ function newUser(nick,email,pass) {
     return usersInfo
 }
 
+// {
+//     "id": "f3bb",
+//     "nick": "sandaws",
+//     "password": "aligator33",
+//     "email": "dawsgamer88@gmail.com"
+//   }
 async function sendUser(user) {
     await fetch(`${link}user`,{
         method: 'POST',
@@ -82,5 +88,5 @@ form.addEventListener('submit',(event)=>{
         const user=newUser(nick,mail,pass)
         sendUser(user)
     }
-    window.location.href='./'
+    window.location.href='/'
 })
