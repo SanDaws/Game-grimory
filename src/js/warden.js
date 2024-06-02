@@ -6,7 +6,6 @@ export function guardian() {
         window.location.href='/'
         
     }
-
-
 }
+
 
