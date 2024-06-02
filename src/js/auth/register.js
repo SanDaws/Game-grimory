@@ -1,4 +1,5 @@
-const link= 'http://localhost:3000/'
+// const link = 'https://sqv986dd-3000.use2.devtunnels.ms/'
+const link = 'http://localhost:3000/'
 
 const form= document.querySelector('form')
 const nick = form.querySelector('#nickname')
@@ -9,10 +10,8 @@ const confPass= form.querySelector('#confirmPassword')
 //guardian
 function guardian() {
     const usertokken=localStorage.getItem('usertoken')
-    console.log(usertokken);
     if (usertokken != null) {
-        alert('usuario')
-        window.location.href='./'
+        window.location.href='/'
         
     }
 
@@ -25,18 +24,17 @@ guardian()
 function validePass(pass,copypass) {
     if (pass.value==copypass.value) {
         return true
-        
     }
     return false
     
 }
+
 async function validemail(email) {
     const response = await fetch(`${link}user?email=${email.value}`)
     const emails = await response.json()
 
     if (emails.length === 0) {
         return true
-
     } else {
         return false
     }
@@ -78,15 +76,18 @@ async function sendUser(user) {
     })
     
 }
-form.addEventListener('submit',(event)=>{
-    event.preventDefault()
-    const resulNick= validatenick(nick)
-    const resulMail= validemail(mail)
-    const resulPass= validePass(pass,confPass)
-    if (resulMail&& resulNick && resulPass) {
 
+form.addEventListener('submit',async (event)=>{
+    event.preventDefault()
+    const resulNick= await validatenick(nick)
+    const resulMail= await validemail(mail)
+    const resulPass= validePass(pass,confPass)
+    console.log(resulNick,resulMail,resulPass)
+    if (resulMail && resulNick && resulPass) {
+        
         const user=newUser(nick,mail,pass)
-        sendUser(user)
+        await sendUser(user)
+        window.location.href='/'
     }
-    window.location.href='/'
+    
 })

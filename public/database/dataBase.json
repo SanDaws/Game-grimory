@@ -17,6 +17,18 @@
       "nick": "sandaws",
       "password": "aligator33",
       "email": "dawsgamer88@gmail.com"
+    },
+    {
+      "id": "82aa",
+      "nick": "Lucas",
+      "password": "1234",
+      "email": "lucas@gmail.com"
+    },
+    {
+      "id": "ed3d",
+      "nick": "firebug",
+      "password": "firearm",
+      "email": "firestorm@gmail.com"
     }
   ],
   "shops": {}
