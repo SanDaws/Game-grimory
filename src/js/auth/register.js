@@ -1,24 +1,14 @@
+import { guardian } from "module";
+guardian()
 // const link = 'https://sqv986dd-3000.use2.devtunnels.ms/'
 const link = 'http://localhost:3000/'
+
 
 const form= document.querySelector('form')
 const nick = form.querySelector('#nickname')
 const mail = form.querySelector('#email')
 const pass= form.querySelector('#password')
 const confPass= form.querySelector('#confirmPassword')
-
-//guardian
-function guardian() {
-    const usertokken=localStorage.getItem('usertoken')
-    if (usertokken != null) {
-        window.location.href='/'
-        
-    }
-
-
-}
-
-guardian()
 
 
 function validePass(pass,copypass) {

@@ -1,3 +1,5 @@
+import { guardian } from "../warden.js";
+guardian()
 //our server endpoint
 //const link = 'https://sqv986dd-3000.use2.devtunnels.ms/' //primero abres el puerto  luego cambias el link
 const link = 'http://localhost:3000/'
