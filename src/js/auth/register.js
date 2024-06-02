@@ -1,4 +1,4 @@
-import { guardian } from "module";
+import { guardian } from "../warden";
 guardian()
 // const link = 'https://sqv986dd-3000.use2.devtunnels.ms/'
 const link = 'http://localhost:3000/'
