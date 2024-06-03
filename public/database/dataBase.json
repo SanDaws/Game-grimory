@@ -8,30 +8,15 @@
   "user": [
     {
       "id": "d4a3",
-      "nick": "daws",
-      "password": "111",
-      "email": "daws@gmail.com"
-    },
-    {
-      "id": "f3bb",
-      "nick": "sandaws",
-      "password": "aligator33",
-      "email": "dawsgamer88@gmail.com"
-    },
-    {
-      "id": "82aa",
-      "nick": "Lucas",
-      "password": "1234",
-      "email": "lucas@gmail.com"
-    },
-    {
-      "id": "ed3d",
-      "nick": "firebug",
-      "password": "firearm",
-      "email": "firestorm@gmail.com"
+      "nick": "Daws",
+      "password": "ratomu",
+      "email": "daws@gmail.com",
+      "list_id":""
+      
     }
   ],
   "list":[
+        
     
   ]
 }
