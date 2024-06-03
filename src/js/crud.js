@@ -32,5 +32,9 @@ async function update(datos,id) {
 //     "games":[]
 //   }
 async function remove(id) {
-    
+    await fetch(`${link}list/${id}`,{
+        method:'DELETE',
+        headers: {"content-Type": "application/json"}
+    })
 }
+
