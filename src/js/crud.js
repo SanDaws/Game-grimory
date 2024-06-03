@@ -28,6 +28,7 @@ async function update(datos,id) {
         
 
 }
+
 // {
 //     "games":[]
 //   }
@@ -38,3 +39,25 @@ async function remove(id) {
     })
 }
 
+function dysplay(list) {
+    
+    list.forEach(game => {
+        const template =`
+    <tr scope="row">
+        <th scope="col">${game.name}</th>
+        <td scope="col">${game.shop}</td>
+        <td scope="col">${game.minprice}</td>
+        <td scope="col">40000 COP</td>
+        <td scope="col"> 20000 COP</td>
+        <td scope="col">----</td>
+        <td scope="col">----</td>
+        <td scope="col">30000</td>
+        <td scope="col">
+    <!-- CRUD buttons -->
+            <button item-id="${game.id}" type="button" class="btn btn-info " ><i class="bi bi-pencil-square"></i></button>
+            <button item-id="${game.id}" type="button" class="btn btn-danger" ><i class="bi bi-trash3"></i></button>
+        </td>
+    </tr>
+    `
+    });
+}
