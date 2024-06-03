@@ -10,13 +10,20 @@
       "id": "d4a3",
       "nick": "Daws",
       "password": "ratomu",
-      "email": "daws@gmail.com",
-      "list_id":""
-      
+      "email": "daws@gmail.com"
+    },
+    {
+      "id": "065b",
+      "nick": "ratomu",
+      "password": "qqq",
+      "email": "sun@god"
     }
   ],
-  "list":[
-        
-    
+  "list": [
+    {
+      "id": "615d",
+      "listof": "ratomu",
+      "games": []
+    }
   ]
 }
