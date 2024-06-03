@@ -47,7 +47,6 @@ function newUser(nick,email,pass) {
         nick:nick.value,
         password:pass.value,
         email:email.value,
-        list_id:asociatedList()
     }
     return usersInfo
 }
