@@ -1,4 +1,5 @@
 import { guardian } from "../warden";
+import { succesregister } from "../alerts/alert.js";
 guardian()
 // const link = 'https://sqv986dd-3000.use2.devtunnels.ms/'
 const link = 'http://localhost:3000/'
@@ -45,7 +46,8 @@ function newUser(nick,email,pass) {
     const usersInfo={
         nick:nick.value,
         password:pass.value,
-        email:email.value
+        email:email.value,
+        list_id:asociatedList()
     }
     return usersInfo
 }
@@ -55,7 +57,22 @@ function newUser(nick,email,pass) {
 //     "nick": "sandaws",
 //     "password": "aligator33",
 //     "email": "dawsgamer88@gmail.com"
+//      "list_id": "0000"
 //   }
+async function asociatedList(nick) {
+    const newList={
+        listof:nick.value,
+        games:[ ]
+    }
+    await fetch(`${link}list`,{
+        method: 'POST',
+        headers:{'content-type':"aplication/json" },
+        body: JSON.stringify(newList)
+    })
+
+
+    
+}
 async function sendUser(user) {
     await fetch(`${link}user`,{
         method: 'POST',
@@ -77,6 +94,9 @@ form.addEventListener('submit',async (event)=>{
         
         const user=newUser(nick,mail,pass)
         await sendUser(user)
+        await asociatedList(nick)
+        succesregister(nick)
+        
         window.location.href='/'
     }
     
