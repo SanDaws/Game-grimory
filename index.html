@@ -28,12 +28,14 @@
 <main>
     <section id="form-to submit">
         <form action="" method="post">
+    <!-- game name and shop -->
             <div class="d-flex">
+        <!-- game name -->
                 <div class="mb-3 align-self-center">
                     <label for="game-name" class="form-label">Game name</label>
                     <input type="text" class="form-control" id="game-name" aria-describedby="game full name" required>
                 </div>
-                <!-- shop -->
+        <!-- shop -->
                 <div class="form-floating align-self-center">
                     <select class="form-select " id="floatingSelect" aria-label="Floating label select example">
                         <option selected disabled>Shop</option>
@@ -44,17 +46,16 @@
                         <option value="ea-games">EA-games store</option>
                     </select>
                     <label for="floatingSelect">Shop where you seen it</label>
-                  </div>
-            </div>
-
-            <article class="d-flex align-items-center">
-                <div>
-                    <div class="mb-3">
-                        <label for="price-expect" class="form-label">minimum game price you will pay</label>
-                        <input type="number" class="form-control" id="price-expect" aria-describedby="" required>
-                    </div>
-                    
                 </div>
+            </div>
+        <!-- minimum price -->
+            <article class="d-flex align-items-center">
+            <!-- minimum price -->
+                <div class="mb-3">
+                    <label for="price-expect" class="form-label">minimum game price you will pay</label>
+                    <input type="number" class="form-control" id="price-expect" aria-describedby="" required>
+                </div>
+            <!-- currency used -->
                 <div  class="mb-3">
                     <label for="currency" >Currency</label>
                     <select class="form-select form-select-sm" id="currency" aria-label="Currency you use" required>
@@ -66,16 +67,10 @@
                         </select>
                 </div>
             </article>
-            
-        <button type="submit" class="btn btn-primary" >
-            Agregar
-        </button>
-        <button type="submit" class="btn btn-info" >
-            editar
-        </button>
-        <button type="submit" class="btn btn-danger" >
-            eliminar
-        </button>
+            <button  type="submit" class="btn btn-primary" >
+                Agregar
+                </button>
+        
 
         </form>
     </section>
@@ -96,6 +91,7 @@
                             <th scope="col">GoG</th>
                             <th scope="col">Ubisoft-shop</th>
                             <th scope="col">EA-games Shop</th>
+                            <th scope="col">options</th>
                             </tr>
                             </thead>
                     <tbody>
@@ -108,7 +104,11 @@
                             <td>----</td>
                             <td>----</td>
                             <td>30000</td>
-
+                            <td>
+                        <!-- CRUD buttons -->
+                                <button type="button" class="btn btn-info " ><i item-id="" class="bi bi-pencil-square"></i></button>
+                                <button type="button" class="btn btn-danger" ><i class="bi bi-trash3"></i></button>
+                            </td>
                         </tr>
                         
                     </tbody>
@@ -117,6 +117,7 @@
     </section>
 </main>
 <footer></footer>
+<script type="module" src="./src/js/crud.js"></script>
 <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>
