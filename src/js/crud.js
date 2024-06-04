@@ -32,7 +32,7 @@ const tbody= table.querySelector('tbody')
 
 
 
-
+//maybe thsi function will be not usefull rightnow because of the use of update
 async function index(data) {
     
 form.addEventListener('submit',async(event)=>{
@@ -46,19 +46,16 @@ form.addEventListener('submit',async(event)=>{
 }) 
 
 }
-
+//work whit the array  to update data
 function updatelsitGame(id,gameObj) {
     gameName.value=gameObj.games[id]
     minPrice.value=Number(gameObj.prices[id])
     shop.value=gameObj.shops[id]
 
-
-    
-    
 }
-
+//update the database list of games
 async function updateJson(datos,id) {
-    const response = await fetch(`${link}list?${id}`, {
+    const response = await fetch(`${link}list/${id}`, {
         method: 'PUT',
         headers:{ 'Content-Type': 'application/json'},
         body: JSON.stringify(datos)
@@ -70,6 +67,8 @@ async function updateJson(datos,id) {
 // {
 //     "games":[]
 //   }
+
+// maybe this function will be useless in thsi program, but delete a register
 async function remove(id) {
     await fetch(`${link}list/${id}`,{
         method:'DELETE',
