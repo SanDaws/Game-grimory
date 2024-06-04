@@ -37,7 +37,7 @@
                 </div>
         <!-- shop -->
                 <div class="form-floating align-self-center">
-                    <select class="form-select " id="floatingSelect" aria-label="Floating label select example">
+                    <select class="form-select " id="shop" aria-label="Floating label select example">
                         <option selected disabled>Shop</option>
                         <option value="steam">Steam</option>
                         <option value="epic-games">Epic Games</option>
@@ -45,7 +45,7 @@
                         <option value="ubisoft">Ubisoft-shop</option>
                         <option value="ea-games">EA-games store</option>
                     </select>
-                    <label for="floatingSelect">Shop where you seen it</label>
+                    <label for="shop">Shop where you seen it</label>
                 </div>
             </div>
         <!-- minimum price -->
@@ -75,46 +75,47 @@
         </form>
     </section>
     <section id="table">
-        <table>
-            <table class="table">
-                <thead>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="3" class="text-center">Your list</th>
+                    <th colspan="5 " class="text-center">The shops</th>
+                    </tr>
                     <tr>
-                        <th colspan="3" class="text-center">Your list</th>
-                        <th colspan="5 " class="text-center">The shops</th>
+                        <th scope="col-2">Game name</th>
+                        <th scope="col">your shop</th>
+                        <th scope="col">min. price</th>
+                        <th scope="col">Steam</th>
+                        <th scope="col">Epic Games</th>
+                        <th scope="col">GoG</th>
+                        <th scope="col">Ubisoft-shop</th>
+                        <th scope="col">EA-games Shop</th>
+                        <th scope="col">options</th>
                         </tr>
-                        <tr>
-                            <th scope="col-2">Game name</th>
-                            <th scope="col">your shop</th>
-                            <th scope="col">min.price</th>
-                            <th scope="col">Steam</th>
-                            <th scope="col">Epic Games</th>
-                            <th scope="col">GoG</th>
-                            <th scope="col">Ubisoft-shop</th>
-                            <th scope="col">EA-games Shop</th>
-                            <th scope="col">options</th>
-                            </tr>
-                            </thead>
-                    <tbody>
-                        <tr scope="row">
-                            <th >turnip boy commit tax evasion</th>
-                            <td scope="col">Steam</td>
-                            <td scope="col">5000 COP</td>
-                            <td scope="col">40000 COP</td>
-                            <td scope="col"> 20000 COP</td>
-                            <td scope="col">----</td>
-                            <td scope="col">----</td>
-                            <td scope="col">30000</td>
-                            <td scope="col">
-                        <!-- CRUD buttons -->
-                                <button type="button" class="btn btn-info " ><i item-id="" class="bi bi-pencil-square"></i></button>
-                                <button type="button" class="btn btn-danger" ><i class="bi bi-trash3"></i></button>
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                <tfoot id="result"></tfoot>
-            </table>
+                        </thead>
+                <tbody>
+                    <tr scope="row">
+                        <th >turnip boy commit tax evasion</th>
+                        <td scope="col">Steam</td>
+                        <td scope="col">5000 COP</td>
+                        <td scope="col">40000 COP</td>
+                        <td scope="col">20000 COP</td>
+                        <td scope="col">----</td>
+                        <td scope="col">----</td>
+                        <td scope="col">30000</td>
+                        <td scope="col">
+                    <!-- CRUD buttons -->
+                            <button id="edit" type="button" class="btn bi bi-pencil-square btn-info " > editar</button>
+                            <button id="delete" type="button" class="btn bi bi-trash3 btn-danger" >borrar</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            <tfoot id="result"></tfoot>
+        </table>
     </section>
+    <button id="sendToserver" class="btn btn-success">guardar cambios</button>
+    <button id="resetList" class="btn btn-danger">Reiniciar lista</button>
 </main>
 <footer></footer>
 <script type="module" src="./src/js/crud.js"></script>
