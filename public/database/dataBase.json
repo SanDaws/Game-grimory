@@ -1,10 +1,4 @@
 {
-  "game": [
-    {
-      "id": "0000",
-      "name": "turnip boy commit tax evasion"
-    }
-  ],
   "user": [
     {
       "id": "d4a3",
@@ -17,12 +11,26 @@
       "nick": "ratomu",
       "password": "qqq",
       "email": "sun@god"
+    },
+    {
+      "id": "d9ef",
+      "nick": "mimoreno",
+      "password": "caligula",
+      "email": "mimoreno@unal"
     }
   ],
   "list": [
     {
       "id": "615d",
       "listof": "ratomu",
+      "games": ["turnip boy"],
+      "shops":["steam"],
+      "prices":["20000"]
+
+    },
+    {
+      "id": "1172",
+      "listof": "mimoreno",
       "games": []
     }
   ]
