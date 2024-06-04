@@ -94,7 +94,10 @@ form.addEventListener('submit',async (event)=>{
         const user=newUser(nick,mail,pass)
         await sendUser(user)
         await asociatedList(nick)
-        succesregister(nick)
+        setTimeout(()=>{ //setTimeout(function(),ms to wait)
+            succesregister(nick)
+        })
+        
         
         window.location.href='/'
     }
